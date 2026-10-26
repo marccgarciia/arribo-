@@ -1,0 +1,24 @@
+name: Actualitza horaris de metro (GTFS TMB)
+on:
+  schedule: [{ cron: "0 5 1 * *" }]   # dia 1 de cada mes
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  gtfs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descarrega el GTFS de TMB
+        env:
+          TMB_APP_ID: ${{ secrets.TMB_APP_ID }}
+          TMB_APP_KEY: ${{ secrets.TMB_APP_KEY }}
+          GTFS_URL: https://api.tmb.cat/v1/static/datasets/gtfs.zip   # documentat a developer.tmb.cat (Static)
+        run: |
+          curl -fsSL -G "$GTFS_URL" --data-urlencode "app_id=$TMB_APP_ID" --data-urlencode "app_key=$TMB_APP_KEY" -o gtfs.zip
+      - run: python3 -I tools/gtfs_metro.py gtfs.zip data/metro-horaris.json
+      - name: Desa els canvis
+        run: |
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add data/metro-horaris.json
+          git diff --cached --quiet || (git commit -m "Actualitza horaris de metro (GTFS)" && git push)
