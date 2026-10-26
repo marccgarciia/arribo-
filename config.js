@@ -2,6 +2,9 @@
 export default {
   // URL del Cloudflare Worker (deixar buit mentre no estigui desplegat → només horari previst)
   workerUrl: "https://prat-igualada-api.marccgarciia-bus.workers.dev",
+  // Caminant: de casa a Les Moreres (i a l'inrevés) i de l'autocar d'Igualada a la uni (i a l'inrevés)
+  caminarCasaMin: 5,
+  caminarUniMin: 5,
   // Minuts entre l'andana de la L9 i la parada de la Diagonal (i a l'inrevés)
   transbordamentMin: 8,
   // Temps de trajecte Les Moreres ↔ Zona Universitària. El valor de data/metro-horaris.json

@@ -20,7 +20,7 @@ export function calculaAnada({ trens, buses, cfg, tempsMetro }) {
   }
   const valides = out.filter(o => o.bus);
   if (valides.length) {
-    const millor = valides.reduce((a, b) => (b.arribada < a.arribada ? b : a));
+    const millor = valides.reduce((a, b) => (b.arribada <= a.arribada ? b : a));
     millor.recomanat = true;
   }
   for (const o of out) o.just = !!o.bus && o.marge < cfg.margeJustMin;
@@ -43,7 +43,7 @@ export function calculaTornada({ buses, ara, metroTR, metroPrev, cfg, tempsMetro
     });
   }
   const valides = out.filter(o => o.metros[0]);
-  if (valides.length) valides.reduce((a, b) => (b.metros[0].arribada < a.metros[0].arribada ? b : a)).recomanat = true;
+  if (valides.length) valides.reduce((a, b) => (b.metros[0].arribada <= a.metros[0].arribada ? b : a)).recomanat = true;
   for (const o of out) o.just = o.marge !== null && o.marge < cfg.margeJustMin;
   return out;
 }

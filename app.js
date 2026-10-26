@@ -1,5 +1,5 @@
 import cfg from "./config.js";
-import { ara, contextDia, expedicionsAvui, resumDia, aHHMM } from "./js/dia.js";
+import { ara, contextDia, expedicionsAvui, resumDia, aHHMM, aMinuts } from "./js/dia.js";
 import { calculaAnada, calculaTornada, trensPrevistos } from "./js/connexions.js";
 
 const $ = s => document.querySelector(s);
@@ -44,44 +44,64 @@ async function carregaAlertes() {
 }
 
 const compte = min => { const d = Math.round(min); return d <= 0 ? "ara" : d < 60 ? `en ${d} min` : `en ${Math.floor(d / 60)} h ${d % 60} min`; };
-const badgeBus = b => `<span class="badge ${b.tipus}">${b.tipus === "expres" ? "Exprés" : "Para als pobles"}</span>`;
+
+const aMin = h => { const [x, y] = h.split(":"); return +x * 60 + +y; };
+const etiquetaBus = b => `<span class="pill ${b.tipus}">${b.tipus === "expres" ? "Exprés" : "Para als pobles"}</span>`;
+const pas = (icona, hora, text, extra = "") => `<li><span class="dot">${icona}</span><div><b>${hora}</b> ${text}${extra}</div></li>`;
+const marge = o => o.just ? `<div class="just">Connexió justa · ${o.marge} min de marge</div>` : `<div class="nota">${o.marge} min de marge</div>`;
 
 function pintaAnada(ctx, tempsMetro) {
   const buses = expedicionsAvui(estat.dades.autocars, "anada", ctx);
-  const { trens } = estat.metro.moreres;
+  const trens = estat.metro.moreres.trens.filter(t => t.min >= ctx.min + cfg.caminarCasaMin);   // temps de caminar fins a l'andana
   const files = calculaAnada({ trens: trens.slice(0, cfg.opcions), buses, cfg, tempsMetro });
   if (!files.length) return `<p class="buit">No hi ha més metros avui des de Les Moreres.</p>`;
-  return files.map(o => `
-    <article class="opcio${o.recomanat ? " rec" : ""}">
-      <div class="fila"><span class="badge l9">L9 Sud</span><span class="hora">${aHHMM(o.tren.min)}</span>
-        <span class="compte">Les Moreres · ${compte(o.tren.min - ctx.min)}</span>${o.recomanat ? `<span class="rec-tag">★ Recomanat</span>` : ""}</div>
-      <div class="pas">Arribes a Zona Univ. <b>${aHHMM(o.arrZU)}</b></div>
-      ${o.bus ? `
-      <div class="pas">${badgeBus(o.bus)} Autocar <b>${o.bus.sortida}</b> (Av. Diagonal) → Igualada <b>${o.bus.arribada}</b>
-        ${o.just ? `<br><span class="just">Connexió justa (${o.marge} min de marge)</span>` : `<br><span class="nota">${o.marge} min de marge</span>`}</div>
-      ${o.expres ? `<div class="pas">${badgeBus(o.expres)} Exprés següent <b>${o.expres.sortida}</b> → Igualada <b>${o.expres.arribada}</b></div>` : ""}`
-      : `<div class="pas">Cap autocar més avui.</div>`}
-    </article>`).join("");
+  return files.map(o => {
+    const uni = o.bus ? aHHMM(o.arribada + cfg.caminarUniMin) : "—";
+    return `<article class="opcio${o.recomanat ? " rec" : ""}">
+      <div class="cap">
+        <div><div class="gran">${aHHMM(o.tren.min)}</div><div class="sub">Metro a Les Moreres · ${compte(o.tren.min - ctx.min)}</div></div>
+        <div class="dest"><div class="sub">Arribes a la uni</div><div class="gran">${uni}</div></div>
+      </div>
+      ${o.recomanat ? `<div class="rec-tag">Arribes abans</div>` : ""}
+      <ul class="tl">
+        ${pas("🚶", aHHMM(o.tren.min - cfg.caminarCasaMin), "Surt de casa", `<span class="nota"> · ${cfg.caminarCasaMin} min caminant</span>`)}
+        ${pas("🚇", aHHMM(o.tren.min), "Metro L9 Sud · Les Moreres", `<span class="nota"> → Zona Univ. ${aHHMM(o.arrZU)}</span>`)}
+        ${o.bus ? `${pas("🚌", o.bus.sortida, `Autocar Av. Diagonal ${etiquetaBus(o.bus)}`, marge(o))}
+        ${pas("📍", o.bus.arribada, "Igualada · Estació d'Autobusos")}
+        ${pas("🎓", uni, "Arribes a la uni", `<span class="nota"> · ${cfg.caminarUniMin} min caminant</span>`)}`
+        : `<li><span class="dot">✕</span><div>Cap autocar més avui.</div></li>`}
+      </ul>
+      ${o.expres ? `<div class="alt">Exprés següent: <b>${o.expres.sortida}</b> → uni <b>${aHHMM(aMinuts(o.expres.arribada) + cfg.caminarUniMin)}</b></div>` : ""}
+    </article>`;
+  }).join("");
 }
 
 function pintaTornada(ctx, tempsMetro) {
   const buses = expedicionsAvui(estat.dades.autocars, "tornada", ctx, { mostrarNomesEstacio: cfg.mostrarNomesEstacio });
   const zu = estat.metro.zonauni;
-  const files = calculaTornada({ buses, ara: ctx.min, metroTR: zu.tempsReal ? zu.trens : null,
+  const ara = ctx.min + cfg.caminarUniMin;      // temps de caminar fins a la parada de l'autocar
+  const files = calculaTornada({ buses, ara, metroTR: zu.tempsReal ? zu.trens : null,
     metroPrev: trensPrevistos(estat.dades.horaris, "zonauni", ctx.dia, ctx.min, ctx.dow), cfg, tempsMetro });
   if (!files.length) return `<p class="buit">No hi ha més autocars avui des d'Igualada.</p>`;
-  return files.map(o => `
-    <article class="opcio${o.recomanat ? " rec" : ""}">
-      <div class="fila">${badgeBus(o.bus)}<span class="hora">${o.bus.sortida}</span>
-        <span class="compte">${o.bus.nomesEstacio ? "Estació d'Autobusos" : "Pg. Verdaguer"} · ${compte(aMin(o.bus.sortida) - ctx.min)}</span>${o.recomanat ? `<span class="rec-tag">★ Recomanat</span>` : ""}</div>
-      ${o.bus.nomesEstacio ? `<div class="nota">Surt només de l'Estació d'Autobusos</div>` : ""}
-      <div class="pas">Arribes a Zona Univ. <b>${aHHMM(o.arrZU)}</b></div>
-      ${o.metros.length ? o.metros.map((m, i) => `<div class="pas"><span class="badge l9">L9 Sud</span> Metro <b>${aHHMM(m.min)}</b> → Les Moreres <b>${aHHMM(m.arribada)}</b>
-        ${i === 0 ? (o.just ? `<br><span class="just">Connexió justa (${o.marge} min de marge)</span>` : `<br><span class="nota">${o.marge} min de marge${o.tempsReal ? " · temps real" : " · horari previst"}</span>`) : ""}</div>`).join("")
-        : `<div class="pas nota">Sense dades de metro per a aquesta hora.</div>`}
-    </article>`).join("");
+  return files.map(o => {
+    const m = o.metros[0];
+    const casa = m ? aHHMM(m.arribada + cfg.caminarCasaMin) : "—";
+    return `<article class="opcio${o.recomanat ? " rec" : ""}">
+      <div class="cap">
+        <div><div class="gran">${o.bus.sortida}</div><div class="sub">${o.bus.nomesEstacio ? "Estació d'Autobusos" : "Pg. Verdaguer"} · ${compte(aMin(o.bus.sortida) - ctx.min)}</div></div>
+        <div class="dest"><div class="sub">Arribes a casa</div><div class="gran">${casa}</div></div>
+      </div>
+      ${o.recomanat ? `<div class="rec-tag">Arribes abans</div>` : ""}
+      <ul class="tl">
+        ${pas("🚌", o.bus.sortida, `Autocar ${etiquetaBus(o.bus)}`, o.bus.nomesEstacio ? `<div class="nota">Surt només de l'Estació d'Autobusos</div>` : "")}
+        ${pas("📍", aHHMM(o.arrZU), "Zona Univ. (Av. Diagonal)")}
+        ${m ? `${pas("🚇", aHHMM(m.min), "Metro L9 Sud", `<span class="nota"> → Les Moreres ${aHHMM(m.arribada)}</span>` + (o.tempsReal ? `<span class="nota"> · temps real</span>` : "") + marge(o))}
+        ${pas("🏠", casa, "Arribes a casa", `<span class="nota"> · ${cfg.caminarCasaMin} min caminant</span>`)}`
+        : `<li><span class="dot">?</span><div class="nota">Sense dades de metro per a aquesta hora.</div></li>`}
+      </ul>
+    </article>`;
+  }).join("");
 }
-const aMin = h => { const [a, b] = h.split(":"); return +a * 60 + +b; };
 
 async function refresca() {
   if (!estat.dades) return;
