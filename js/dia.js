@@ -11,7 +11,7 @@ export function ara(date = new Date()) {
   }).formatToParts(date).map(x => [x.type, x.value]));
   const iso = `${p.year}-${p.month}-${p.day}`;
   const dow = new Date(Date.UTC(+p.year, +p.month - 1, +p.day)).getUTCDay();
-  return { iso, mmdd: `${p.month}-${p.day}`, dow, min: +p.hour * 60 + +p.minute + +p.second / 60 };
+  return { iso, mmdd: `${p.month}-${p.day}`, dow, hms: `${p.hour}:${p.minute}:${p.second}`, min: +p.hour * 60 + +p.minute + +p.second / 60 };
 }
 
 export const aMinuts = hhmm => { const [h, m] = hhmm.split(":"); return +h * 60 + +m; };
@@ -65,12 +65,19 @@ export function expedicionsAvui(autocars, sentit, ctx, { mostrarNomesEstacio = t
 
 const NOMS_DIA = { feiner: "horari de feiners", dissabte: "horari de dissabtes", diumenge: "horari de diumenges i festius", festiuBCN: "horari de festius locals" };
 const DIES = ["diumenge", "dilluns", "dimarts", "dimecres", "dijous", "divendres", "dissabte"];
+const MESOS = ["gener", "febrer", "març", "abril", "maig", "juny", "juliol", "agost", "setembre", "octubre", "novembre", "desembre"];
+
+/** «dilluns 26 d'octubre» */
+export function dataLlarga(ctx) {
+  const mes = MESOS[+ctx.iso.slice(5, 7) - 1];
+  return `${DIES[ctx.dow]} ${+ctx.iso.slice(8)} ${/^[aeiou]/.test(mes) ? "d'" : "de "}${mes}`;
+}
 
 /** Línia resum de dalt: «Avui: festiu local a Barcelona · horari de festius locals» */
 export function resumDia(ctx) {
   const parts = [];
+  parts.push(dataLlarga(ctx));
   if (ctx.festiuLocal) parts.push(`festiu local a Barcelona (${ctx.festiuLocal.nom})`);
-  else parts.push(DIES[ctx.dow]);
   parts.push(NOMS_DIA[ctx.dia]);
   const avisos = [];
   if (ctx.periodes.has("agost")) avisos.push("Agost · alguns exprés no circulen");

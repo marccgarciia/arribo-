@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { contextDia, expedicioValida, expedicionsAvui, resumDia } from "../js/dia.js";
+import { contextDia, expedicioValida, expedicionsAvui, resumDia, dataLlarga } from "../js/dia.js";
 
 const cal = JSON.parse(readFileSync(new URL("../data/calendari.json", import.meta.url)));
 const bus = JSON.parse(readFileSync(new URL("../data/autocars.json", import.meta.url)));
@@ -55,4 +55,10 @@ test("dia lectiu només per a notes (7)/(8)", () => {
   const e = bus.expedicions.find(x => x.regles.lectiu);
   assert.ok(expedicioValida(e, ctx("2026-11-03")));
   assert.ok(!expedicioValida(e, ctx("2026-12-29")));
+});
+
+test("data llarga en català", () => {
+  assert.equal(dataLlarga(ctx("2026-10-26")), "dilluns 26 d'octubre");
+  assert.equal(dataLlarga(ctx("2026-11-03")), "dimarts 3 de novembre");
+  assert.equal(resumDia(ctx("2026-11-03")).text, "Avui: dimarts 3 de novembre · horari de feiners");
 });

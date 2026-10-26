@@ -170,3 +170,7 @@ document.addEventListener("visibilitychange", () => { if (document.hidden) clear
 
 carregaEstatiques().then(() => { refresca(); engega(); })
   .catch(() => { $("#llista").innerHTML = `<p class="buit">No s'han pogut carregar les dades.</p>`; });
+
+// Rellotge en directe (hora de Madrid)
+const rellotge = () => { $("#rellotge").textContent = ara().hms; };
+rellotge(); setInterval(rellotge, 1000);
