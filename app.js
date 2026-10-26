@@ -6,7 +6,7 @@ const $ = s => document.querySelector(s);
 const json = async url => (await fetch(url, { cache: "no-cache" })).json();
 const ambTimeout = (p, ms) => Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), ms))]);
 
-const estat = { sentit: ara().min < 12 * 60 ? "anada" : "tornada", dades: null, metro: {}, alertes: [] };
+const estat = { sentit: ara().min < 12 * 60 ? "anada" : "tornada", hSentit: ara().min < 12 * 60 ? "anada" : "tornada", filtre: "tots", passats: false, dades: null, metro: {}, alertes: [] };
 
 async function carregaEstatiques() {
   const [autocars, cal, avisos, horaris] = await Promise.all([
@@ -103,29 +103,67 @@ function pintaTornada(ctx, tempsMetro) {
   }).join("");
 }
 
-async function refresca() {
-  if (!estat.dades) return;
-  const ctx = contextDia(new Date(), estat.dades.cal);
-  const horaris = estat.dades.horaris;
-  const tempsMetro = horaris?.tempsMetroMin ?? cfg.tempsMetroMin;
-  const [moreres, zonauni] = await Promise.all([carregaMetro("moreres", ctx), carregaMetro("zonauni", ctx)]);
-  estat.metro = { moreres, zonauni };
-  await carregaAlertes();
+const FILTRES = [["tots", "Tots"], ["expres", "Exprés"], ["pobles", "Para als pobles"]];
 
+/** Taula simple d'autocars d'avui (només les parades que ens interessen), filtrable per tipus. */
+function pintaHorari(ctx) {
+  const s = estat.hSentit;
+  const nom = estat.dades.autocars.parades[s];
+  let files = expedicionsAvui(estat.dades.autocars, s, ctx, { mostrarNomesEstacio: cfg.mostrarNomesEstacio });
+  if (estat.filtre !== "tots") files = files.filter(e => e.tipus === estat.filtre);
+  const total = files.length, passats = files.filter(e => aMinuts(e.sortida) < ctx.min).length;
+  if (!estat.passats) files = files.filter(e => aMinuts(e.sortida) >= ctx.min);
+  const seguent = files.findIndex(e => aMinuts(e.sortida) >= ctx.min);
+  const botons = (clau, llista, actual) => `<div class="xips">${llista.map(([v, t]) =>
+    `<button data-${clau}="${v}" aria-pressed="${v === actual}">${t}</button>`).join("")}</div>`;
+  return `${botons("hs", [["anada", "Anada"], ["tornada", "Tornada"]], s)}${botons("f", FILTRES, estat.filtre)}
+    <p class="sub taula-cap">${nom.puja} → ${nom.baixa} · ${total - passats} autocars més avui${passats ? ` · <a href="#" data-passats="1">${estat.passats ? "amaga els passats" : `veure els ${passats} que ja han passat`}</a>` : ""}</p>
+    <table class="horari"><thead><tr><th>Surt</th><th>Arriba</th><th>Durada</th><th></th></tr></thead><tbody>
+    ${files.map((e, k) => `<tr class="${aMinuts(e.sortida) < ctx.min ? "passat" : ""}${k === seguent ? " seguent" : ""}">
+      <td><b>${e.sortida}</b>${e.nomesEstacio ? `<span class="nota"> Est.</span>` : ""}</td><td><b>${e.arribada}</b></td>
+      <td class="nota">${Math.round(aMinuts(e.arribada) - aMinuts(e.sortida))} min</td><td><span class="pill ${e.tipus}">${e.tipus === "expres" ? "Exprés" : "Pobles"}</span></td></tr>`).join("") || `<tr><td colspan="4" class="buit">Cap autocar d'aquest tipus avui.</td></tr>`}
+    </tbody></table>
+    ${s === "tornada" && cfg.mostrarNomesEstacio ? `<p class="nota">«Est.» = surt només de l'Estació d'Autobusos (no passa per Pg. Verdaguer).</p>` : ""}`;
+}
+
+/** Torna a pintar amb les dades que ja tenim (canvi de pestanya o filtre, sense tornar a demanar res). */
+function pinta() {
+  if (!estat.ctx) return;
+  const { ctx, tempsMetro } = estat;
   const r = resumDia(ctx);
   $("#resum").textContent = r.text + (r.avisos.length ? " · " + r.avisos.join(" · ") : "");
   const avisos = [...estat.alertes];
   if (!ctx.anyVerificat) avisos.push("El calendari de festius d'aquest any encara no està verificat.");
-  $("#avisos").innerHTML = avisos.map(a => `<p class="avis"></p>`).join("");
+  $("#avisos").innerHTML = avisos.map(() => `<p class="avis"></p>`).join("");
   document.querySelectorAll("#avisos .avis").forEach((el, i) => { el.textContent = avisos[i]; });
 
   document.querySelectorAll(".pestanyes button").forEach(b => b.setAttribute("aria-selected", b.dataset.sentit === estat.sentit));
-  $("#llista").innerHTML = estat.sentit === "anada" ? pintaAnada(ctx, tempsMetro) : pintaTornada(ctx, tempsMetro);
-  const tr = (estat.sentit === "anada" ? moreres : zonauni).tempsReal;
-  $("#origen").textContent = tr ? "Metro: temps real TMB" : "Metro: horari previst (sense temps real)";
+  $("#llista").innerHTML = estat.sentit === "anada" ? pintaAnada(ctx, tempsMetro)
+    : estat.sentit === "tornada" ? pintaTornada(ctx, tempsMetro) : pintaHorari(ctx);
+  const tr = (estat.sentit === "tornada" ? estat.metro.zonauni : estat.metro.moreres).tempsReal;
+  $("#origen").textContent = estat.sentit === "horari" ? "Autocars: horari orientatiu de Monbus"
+    : tr ? "Metro: temps real TMB" : "Metro: horari previst (sense temps real)";
 }
 
-document.querySelectorAll(".pestanyes button").forEach(b => b.addEventListener("click", () => { estat.sentit = b.dataset.sentit; refresca(); }));
+async function refresca() {
+  if (!estat.dades) return;
+  const ctx = contextDia(new Date(), estat.dades.cal);
+  const tempsMetro = estat.dades.horaris?.tempsMetroMin ?? cfg.tempsMetroMin;
+  const [moreres, zonauni] = await Promise.all([carregaMetro("moreres", ctx), carregaMetro("zonauni", ctx)]);
+  estat.metro = { moreres, zonauni };
+  await carregaAlertes();
+  Object.assign(estat, { ctx, tempsMetro });
+  pinta();
+}
+
+document.querySelectorAll(".pestanyes button").forEach(b => b.addEventListener("click", () => { estat.sentit = b.dataset.sentit; pinta(); }));
+$("#llista").addEventListener("click", e => {          // xips de la taula d'horaris
+  if (e.target.closest("[data-passats]")) { e.preventDefault(); estat.passats = !estat.passats; return pinta(); }
+  const b = e.target.closest("button[data-hs], button[data-f]");
+  if (!b) return;
+  if (b.dataset.hs) estat.hSentit = b.dataset.hs; else estat.filtre = b.dataset.f;
+  pinta();
+});
 let timer;
 const engega = () => { clearInterval(timer); timer = setInterval(refresca, cfg.refrescMs); };
 document.addEventListener("visibilitychange", () => { if (document.hidden) clearInterval(timer); else { refresca(); engega(); } });

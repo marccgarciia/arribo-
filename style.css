@@ -13,7 +13,7 @@ header { padding-top: calc(env(safe-area-inset-top) + 20px); }
 h1 { font-size: 1.6rem; letter-spacing: -.02em; margin: 0; }
 .resum { margin: 4px 0 14px; color: var(--mut); font-size: .9rem; }
 #avisos .avis { background: var(--avis); border-radius: 14px; padding: 10px 14px; margin: 0 0 8px; font-size: .9rem; }
-.pestanyes { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: var(--soft); padding: 4px; border-radius: 14px; margin: 12px 0 16px; }
+.pestanyes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; background: var(--soft); padding: 4px; border-radius: 14px; margin: 12px 0 16px; }
 .pestanyes button { border: 0; background: transparent; color: var(--mut); font: inherit; font-weight: 600; padding: 10px; border-radius: 10px; cursor: pointer; }
 .pestanyes button[aria-selected="true"] { background: var(--ink); color: var(--on-ink); }
 
@@ -42,3 +42,16 @@ h1 { font-size: 1.6rem; letter-spacing: -.02em; margin: 0; }
 footer { color: var(--mut); font-size: .78rem; padding: 12px 0 28px; }
 footer a { color: inherit; }
 .origen { font-weight: 600; }
+
+.xips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.xips button { border: 1.5px solid var(--line); background: var(--card); color: var(--text); font: inherit; font-size: .85rem; font-weight: 600; padding: 6px 14px; border-radius: 99px; cursor: pointer; }
+.xips button[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); border-color: var(--ink); }
+.taula-cap { margin: 6px 0 8px; }
+.horari { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin-bottom: 10px; }
+.horari th { text-align: left; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; color: var(--mut); padding: 10px 12px; background: var(--soft); }
+.horari td { padding: 9px 12px; border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.horari tr.passat { opacity: .4; }
+.horari tr.seguent td { background: var(--soft); }
+.horari tr.seguent td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
+.taula-cap a { color: var(--text); font-weight: 600; }
+.pill { white-space: nowrap; }
