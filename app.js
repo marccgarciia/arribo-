@@ -62,7 +62,7 @@ function pintaAnada(ctx, tempsMetro) {
         <div><div class="gran">${aHHMM(o.tren.min)}</div><div class="sub">Metro a Les Moreres · ${compte(o.tren.min - ctx.min)}</div></div>
         <div class="dest"><div class="sub">Arribes a la uni</div><div class="gran">${uni}</div></div>
       </div>
-      ${o.recomanat ? `<div class="rec-tag">Arribes abans</div>` : ""}
+      ${o.recomanat ? `<div class="rec-tag">${files.some(f => f !== o && f.bus && f.arribada === o.arribada) ? "Millor opció · mateixa arribada, surts més tard" : "Millor opció · arribes abans"}</div>` : ""}
       <ul class="tl">
         ${pas("🚶", aHHMM(o.tren.min - cfg.caminarCasaMin), "Surt de casa", `<span class="nota"> · ${cfg.caminarCasaMin} min caminant</span>`)}
         ${pas("🚇", aHHMM(o.tren.min), "Metro L9 Sud · Les Moreres", `<span class="nota"> → Zona Univ. ${aHHMM(o.arrZU)}</span>`)}
@@ -91,7 +91,7 @@ function pintaTornada(ctx, tempsMetro) {
         <div><div class="gran">${o.bus.sortida}</div><div class="sub">${o.bus.nomesEstacio ? "Estació d'Autobusos" : "Pg. Verdaguer"} · ${compte(aMin(o.bus.sortida) - ctx.min)}</div></div>
         <div class="dest"><div class="sub">Arribes a casa</div><div class="gran">${casa}</div></div>
       </div>
-      ${o.recomanat ? `<div class="rec-tag">Arribes abans</div>` : ""}
+      ${o.recomanat ? `<div class="rec-tag">Millor opció${files.some(f => f !== o && f.metros[0] && f.metros[0].arribada === m.arribada) ? " · mateixa arribada" : " · arribes abans"}</div>` : ""}
       <ul class="tl">
         ${pas("🚌", o.bus.sortida, `Autocar ${etiquetaBus(o.bus)}`, o.bus.nomesEstacio ? `<div class="nota">Surt només de l'Estació d'Autobusos</div>` : "")}
         ${pas("📍", aHHMM(o.arrZU), "Zona Univ. (Av. Diagonal)")}
