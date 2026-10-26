@@ -27,7 +27,7 @@ async function carregaMetro(estacio, ctx) {
       return { tempsReal: true, trens: trens.map(t => ({ min: ara(new Date(t.ts)).min })).filter(t => t.min >= ctx.min - 1).sort((a, b) => a.min - b.min) };
     } catch { /* cau a l'horari previst */ }
   }
-  return { tempsReal: false, trens: trensPrevistos(horaris, estacio, ctx.dia, ctx.min) };
+  return { tempsReal: false, trens: trensPrevistos(horaris, estacio, ctx.dia, ctx.min, ctx.dow) };
 }
 
 async function carregaAlertes() {
@@ -67,7 +67,7 @@ function pintaTornada(ctx, tempsMetro) {
   const buses = expedicionsAvui(estat.dades.autocars, "tornada", ctx, { mostrarNomesEstacio: cfg.mostrarNomesEstacio });
   const zu = estat.metro.zonauni;
   const files = calculaTornada({ buses, ara: ctx.min, metroTR: zu.tempsReal ? zu.trens : null,
-    metroPrev: trensPrevistos(estat.dades.horaris, "zonauni", ctx.dia, ctx.min), cfg, tempsMetro });
+    metroPrev: trensPrevistos(estat.dades.horaris, "zonauni", ctx.dia, ctx.min, ctx.dow), cfg, tempsMetro });
   if (!files.length) return `<p class="buit">No hi ha més autocars avui des d'Igualada.</p>`;
   return files.map(o => `
     <article class="opcio${o.recomanat ? " rec" : ""}">

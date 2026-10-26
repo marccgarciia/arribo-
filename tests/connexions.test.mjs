@@ -26,3 +26,11 @@ test("tornada: metro després de l'arribada + transbordament", () => {
   assert.equal(r[0].metros[0].arribada, 13 * 60 + 29);
   assert.equal(r[0].tempsReal, false);
 });
+
+import { trensPrevistos } from "../js/connexions.js";
+test("trensPrevistos: divendres té horari propi i els festius fan servir el de diumenge", () => {
+  const h = { moreres: { feiner: ["06:00"], divendres: ["07:00"], dissabte: ["08:00"], diumenge: ["09:00"] } };
+  assert.equal(trensPrevistos(h, "moreres", "feiner", 0, 2)[0].min, 360);
+  assert.equal(trensPrevistos(h, "moreres", "feiner", 0, 5)[0].min, 420);
+  assert.equal(trensPrevistos(h, "moreres", "festiuBCN", 0, 4)[0].min, 540);
+});

@@ -49,9 +49,10 @@ export function calculaTornada({ buses, ara, metroTR, metroPrev, cfg, tempsMetro
 }
 
 /** Trens previstos (GTFS) per a un dia i estació: ["05:12",...] → [{min}] a partir de `ara` (minuts). */
-export function trensPrevistos(horaris, estacio, dia, ara) {
-  const clau = dia === "festiuBCN" ? "diumenge" : dia;
-  const llista = horaris?.[estacio]?.[clau] || [];
+export function trensPrevistos(horaris, estacio, dia, ara, dow) {
+  // Festius → horari de diumenge; els divendres tenen horari propi (si el GTFS el distingeix)
+  const clau = dia === "festiuBCN" ? "diumenge" : dia === "feiner" && dow === 5 ? "divendres" : dia;
+  const llista = horaris?.[estacio]?.[clau]?.length ? horaris[estacio][clau] : horaris?.[estacio]?.[dia === "festiuBCN" ? "diumenge" : dia] || [];
   return llista.map(aMinuts).filter(m => m >= ara).sort((a, b) => a - b).map(min => ({ min }));
 }
 export { aHHMM };
