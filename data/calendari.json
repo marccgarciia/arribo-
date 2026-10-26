@@ -1,0 +1,32 @@
+{
+  "_comentari": "Actualitzar un cop l'any. 2026: festius oficials (Ordre EMT/66/2025, DOGC 06/05/2025; locals de Barcelona: Decret d'Alcaldia 16408 de 04/06/2025). 2027: PROVISIONAL (calculat a partir de les regles habituals; verificar quan es publiqui al DOGC).",
+  "anysVerificats": [2026],
+  "festius": {
+    "catalunya": [
+      "2026-01-01", "2026-01-06", "2026-04-03", "2026-04-06", "2026-05-01", "2026-06-24",
+      "2026-08-15", "2026-09-11", "2026-10-12", "2026-11-01", "2026-12-08", "2026-12-25", "2026-12-26",
+      "2027-01-01", "2027-01-06", "2027-03-26", "2027-03-29", "2027-05-01", "2027-06-24",
+      "2027-08-15", "2027-09-11", "2027-10-12", "2027-11-01", "2027-12-08", "2027-12-25", "2027-12-26"
+    ],
+    "barcelona": [
+      { "data": "2026-05-25", "nom": "Dilluns de Pasqua Granada" },
+      { "data": "2026-09-24", "nom": "La Mercè" },
+      { "data": "2027-05-17", "nom": "Dilluns de Pasqua Granada (provisional)" },
+      { "data": "2027-09-24", "nom": "La Mercè (provisional)" }
+    ]
+  },
+  "periodes": {
+    "agost":        { "nom": "Agost",              "recurrent": [["08-01", "08-31"]] },
+    "nadal2631":    { "nom": "26–31 de desembre",  "recurrent": [["12-26", "12-31"]] },
+    "estiu":        { "nom": "15/07–01/09",        "recurrent": [["07-15", "09-01"]] },
+    "dijousSant":   { "nom": "Dijous Sant",        "dates": ["2026-04-02", "2027-03-25"] },
+    "setmanaSanta": { "nom": "Setmana Santa",      "rangs": [["2026-03-30", "2026-04-06"], ["2027-03-22", "2027-03-29"]] }
+  },
+  "noLectius": [
+    { "nom": "Setmana Santa",        "rang": ["2026-03-30", "2026-04-06"] },
+    { "nom": "Vacances d'estiu",     "rang": ["2026-06-27", "2026-09-13"] },
+    { "nom": "Vacances de Nadal",    "rang": ["2026-12-23", "2027-01-07"] },
+    { "nom": "Setmana Santa",        "rang": ["2027-03-22", "2027-03-29"] },
+    { "nom": "Vacances d'estiu",     "rang": ["2027-06-26", "2027-09-12"] }
+  ]
+}

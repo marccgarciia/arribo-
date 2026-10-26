@@ -1,0 +1,3606 @@
+{
+ "font": "Monbus — Igualada–Esparreguera–Barcelona, PDF v210126",
+ "avis": "Transcrit del PDF amb tools/extreu_pdf.py + tools/genera_autocars.py. Cal regenerar-ho si Monbus publica una versió nova.",
+ "parades": {
+  "anada": {
+   "puja": "Av. Diagonal (Zona Univ.)",
+   "baixa": "Igualada – Estació d'Autobusos"
+  },
+  "tornada": {
+   "puja": "Igualada – Pg. Verdaguer",
+   "baixa": "Av. Diagonal (Zona Univ.)"
+  }
+ },
+ "notesText": {
+  "1": "Tot l'any",
+  "2": "No funciona a l'agost, ni Dijous Sant, ni del 26 al 31 de desembre",
+  "3": "No circula del 15/07 a l'01/09, ni Setmana Santa, ni del 26 al 31 de desembre",
+  "4": "Puja al poble de Collbató",
+  "5": "Només a l'agost, del 26 al 31 de desembre i Dijous Sant",
+  "6": "A l'agost, del 26 al 31 de desembre i Dijous Sant surt des de Sta. Margarida de Montbui"
+ },
+ "expedicions": [
+  {
+   "id": "a-dissabte-0709-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "07:09",
+   "arribada": "08:02",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-dissabte-0809-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "08:09",
+   "arribada": "09:12",
+   "tipus": "pobles",
+   "notes": [
+    "1",
+    "2"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-dissabte-0909-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "09:09",
+   "arribada": "10:02",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-dissabte-1024-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "10:24",
+   "arribada": "11:30",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-dissabte-1109-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "11:09",
+   "arribada": "12:02",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-dissabte-1124-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "11:24",
+   "arribada": "12:17",
+   "tipus": "pobles",
+   "notes": [
+    "1",
+    "2"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-dissabte-1309-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "13:09",
+   "arribada": "14:02",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-dissabte-1424-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "14:24",
+   "arribada": "15:17",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-dissabte-1654-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "16:54",
+   "arribada": "17:47",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-dissabte-1749-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "17:49",
+   "arribada": "18:42",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-dissabte-1834-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "18:34",
+   "arribada": "19:27",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-dissabte-2009-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "20:09",
+   "arribada": "21:02",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-dissabte-2204-e",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "22:04",
+   "arribada": "22:50",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-dissabte-2204-p",
+   "sentit": "anada",
+   "dia": "dissabte",
+   "sortida": "22:04",
+   "arribada": "22:57",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-diumenge-0924-p",
+   "sentit": "anada",
+   "dia": "diumenge",
+   "sortida": "09:24",
+   "arribada": "10:17",
+   "tipus": "pobles",
+   "notes": [
+    "4"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-diumenge-1104-p",
+   "sentit": "anada",
+   "dia": "diumenge",
+   "sortida": "11:04",
+   "arribada": "11:57",
+   "tipus": "pobles",
+   "notes": [
+    "4"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-diumenge-1334-p",
+   "sentit": "anada",
+   "dia": "diumenge",
+   "sortida": "13:34",
+   "arribada": "14:40",
+   "tipus": "pobles",
+   "notes": [
+    "4"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-diumenge-1704-p",
+   "sentit": "anada",
+   "dia": "diumenge",
+   "sortida": "17:04",
+   "arribada": "17:50",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-diumenge-1704-p-2",
+   "sentit": "anada",
+   "dia": "diumenge",
+   "sortida": "17:04",
+   "arribada": "17:57",
+   "tipus": "pobles",
+   "notes": [
+    "2",
+    "4"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-diumenge-1924-p",
+   "sentit": "anada",
+   "dia": "diumenge",
+   "sortida": "19:24",
+   "arribada": "20:30",
+   "tipus": "pobles",
+   "notes": [
+    "4"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-diumenge-1934-p",
+   "sentit": "anada",
+   "dia": "diumenge",
+   "sortida": "19:34",
+   "arribada": "20:27",
+   "tipus": "pobles",
+   "notes": [
+    "4"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-diumenge-2034-p",
+   "sentit": "anada",
+   "dia": "diumenge",
+   "sortida": "20:34",
+   "arribada": "21:20",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-diumenge-2034-p-2",
+   "sentit": "anada",
+   "dia": "diumenge",
+   "sortida": "20:34",
+   "arribada": "21:27",
+   "tipus": "pobles",
+   "notes": [
+    "4"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-diumenge-2119-p",
+   "sentit": "anada",
+   "dia": "diumenge",
+   "sortida": "21:19",
+   "arribada": "22:12",
+   "tipus": "pobles",
+   "notes": [
+    "4"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-0619-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "06:19",
+   "arribada": "07:05",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-0624-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "06:24",
+   "arribada": "08:00",
+   "tipus": "pobles",
+   "notes": [
+    "1",
+    "4"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-0654-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "06:54",
+   "arribada": "07:47",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-0704-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "07:04",
+   "arribada": "07:57",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-0719-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "07:19",
+   "arribada": "08:05",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-0719-e-2",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "07:19",
+   "arribada": "08:05",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-0734-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "07:34",
+   "arribada": "08:27",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-0749-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "07:49",
+   "arribada": "08:35",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-0804-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "08:04",
+   "arribada": "08:57",
+   "tipus": "pobles",
+   "notes": [
+    "1",
+    "4"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-0824-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "08:24",
+   "arribada": "09:17",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-0834-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "08:34",
+   "arribada": "09:20",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-0849-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "08:49",
+   "arribada": "09:42",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-0854-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "08:54",
+   "arribada": "09:47",
+   "tipus": "pobles",
+   "notes": [
+    "2",
+    "7"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-0924-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "09:24",
+   "arribada": "10:17",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-0939-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "09:39",
+   "arribada": "10:30",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-0949-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "09:49",
+   "arribada": "10:35",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-0949-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "09:49",
+   "arribada": "10:42",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1004-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "10:04",
+   "arribada": "10:50",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1019-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "10:19",
+   "arribada": "11:05",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1019-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "10:19",
+   "arribada": "11:12",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1024-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "10:24",
+   "arribada": "11:30",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1049-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "10:49",
+   "arribada": "11:35",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1054-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "10:54",
+   "arribada": "11:47",
+   "tipus": "pobles",
+   "notes": [
+    "2",
+    "4"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1124-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "11:24",
+   "arribada": "12:20",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-1134-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "11:34",
+   "arribada": "12:27",
+   "tipus": "pobles",
+   "notes": [
+    "4",
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1154-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "11:54",
+   "arribada": "12:47",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1219-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "12:19",
+   "arribada": "13:22",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1224-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "12:24",
+   "arribada": "13:17",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1249-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "12:49",
+   "arribada": "13:35",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1254-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "12:54",
+   "arribada": "13:47",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1304-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "13:04",
+   "arribada": "13:57",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1319-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "13:19",
+   "arribada": "14:05",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1324-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "13:24",
+   "arribada": "14:17",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1349-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "13:49",
+   "arribada": "14:35",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1404-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "14:04",
+   "arribada": "14:57",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1409-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "14:09",
+   "arribada": "15:15",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1419-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "14:19",
+   "arribada": "15:05",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1424-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "14:24",
+   "arribada": "15:17",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-1439-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "14:39",
+   "arribada": "15:25",
+   "tipus": "expres",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1444-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "14:44",
+   "arribada": "15:37",
+   "tipus": "pobles",
+   "notes": [
+    "3"
+   ],
+   "regles": {
+    "excepte": [
+     "estiu",
+     "nadal2631",
+     "setmanaSanta"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1449-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "14:49",
+   "arribada": "15:40",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-1454-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "14:54",
+   "arribada": "15:47",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-1519-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "15:19",
+   "arribada": "16:05",
+   "tipus": "expres",
+   "notes": [
+    "8"
+   ],
+   "regles": {
+    "lectiu": true
+   }
+  },
+  {
+   "id": "a-feiner-1519-e-2",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "15:19",
+   "arribada": "16:05",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-1524-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "15:24",
+   "arribada": "16:35",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1554-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "15:54",
+   "arribada": "17:00",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-1619-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "16:19",
+   "arribada": "17:05",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1624-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "16:24",
+   "arribada": "17:40",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1634-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "16:34",
+   "arribada": "17:27",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1649-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "16:49",
+   "arribada": "17:35",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-1649-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "16:49",
+   "arribada": "17:53",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1724-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "17:24",
+   "arribada": "18:17",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1734-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "17:34",
+   "arribada": "18:20",
+   "tipus": "expres",
+   "notes": [
+    "8"
+   ],
+   "regles": {
+    "lectiu": true
+   }
+  },
+  {
+   "id": "a-feiner-1749-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "17:49",
+   "arribada": "18:35",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1750-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "17:50",
+   "arribada": "18:42",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1754-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "17:54",
+   "arribada": "18:47",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1819-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "18:19",
+   "arribada": "19:05",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1829-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "18:29",
+   "arribada": "19:22",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1834-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "18:34",
+   "arribada": "19:40",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1834-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "18:34",
+   "arribada": "19:35",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-1839-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "18:39",
+   "arribada": "19:32",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1849-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "18:49",
+   "arribada": "19:35",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1854-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "18:54",
+   "arribada": "19:53",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1904-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "19:04",
+   "arribada": "19:57",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1909-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "19:09",
+   "arribada": "20:02",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1919-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "19:19",
+   "arribada": "20:05",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1924-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "19:24",
+   "arribada": "20:17",
+   "tipus": "pobles",
+   "notes": [
+    "2",
+    "4"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1939-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "19:39",
+   "arribada": "20:32",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-1954-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "19:54",
+   "arribada": "20:47",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-2004-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "20:04",
+   "arribada": "20:50",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-2004-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "20:04",
+   "arribada": "20:57",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-2009-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "20:09",
+   "arribada": "20:55",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-2024-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "20:24",
+   "arribada": "21:17",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-2049-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "20:49",
+   "arribada": "21:35",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-2054-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "20:54",
+   "arribada": "22:10",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-2119-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "21:19",
+   "arribada": "22:05",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-2124-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "21:24",
+   "arribada": "22:30",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-2149-e",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "21:49",
+   "arribada": "22:55",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "a-feiner-2154-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "21:54",
+   "arribada": "23:10",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-2204-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "22:04",
+   "arribada": "22:57",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-feiner-2234-p",
+   "sentit": "anada",
+   "dia": "feiner",
+   "sortida": "22:34",
+   "arribada": "23:27",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "a-festiuBCN-0619-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "06:19",
+   "arribada": "07:05",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-0709-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "07:09",
+   "arribada": "08:02",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-0719-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "07:19",
+   "arribada": "08:05",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-0749-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "07:49",
+   "arribada": "08:35",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-0809-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "08:09",
+   "arribada": "09:12",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-0834-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "08:34",
+   "arribada": "09:20",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-0909-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "09:09",
+   "arribada": "10:02",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-0949-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "09:49",
+   "arribada": "10:35",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1019-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "10:19",
+   "arribada": "11:05",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1019-p-2",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "10:19",
+   "arribada": "11:12",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1049-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "10:49",
+   "arribada": "11:35",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1109-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "11:09",
+   "arribada": "12:02",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1124-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "11:24",
+   "arribada": "12:17",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1249-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "12:49",
+   "arribada": "13:35",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1309-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "13:09",
+   "arribada": "14:02",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1319-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "13:19",
+   "arribada": "14:05",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1349-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "13:49",
+   "arribada": "14:35",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1419-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "14:19",
+   "arribada": "15:05",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1424-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "14:24",
+   "arribada": "15:17",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1519-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "15:19",
+   "arribada": "16:05",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1549-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "15:49",
+   "arribada": "16:05",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1619-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "16:19",
+   "arribada": "17:05",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1649-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "16:49",
+   "arribada": "17:35",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1654-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "16:54",
+   "arribada": "17:47",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1749-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "17:49",
+   "arribada": "18:35",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1749-p-2",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "17:49",
+   "arribada": "18:42",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1819-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "18:19",
+   "arribada": "19:05",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1834-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "18:34",
+   "arribada": "19:27",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-1849-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "18:49",
+   "arribada": "19:35",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-2004-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "20:04",
+   "arribada": "20:50",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-2009-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "20:09",
+   "arribada": "21:02",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-2049-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "20:49",
+   "arribada": "21:35",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-2119-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "21:19",
+   "arribada": "22:05",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "a-festiuBCN-2204-p",
+   "sentit": "anada",
+   "dia": "festiuBCN",
+   "sortida": "22:04",
+   "arribada": "22:57",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-0615-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "06:15",
+   "arribada": "07:30",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-0645-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "06:45",
+   "arribada": "08:03",
+   "tipus": "pobles",
+   "notes": [
+    "1",
+    "3"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-0745-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "07:45",
+   "arribada": "09:00",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-0845-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "08:45",
+   "arribada": "10:00",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-0945-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "09:45",
+   "arribada": "11:00",
+   "tipus": "pobles",
+   "notes": [
+    "1",
+    "2"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-1115-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "11:15",
+   "arribada": "12:30",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-1245-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "12:45",
+   "arribada": "14:26",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-1415-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "14:15",
+   "arribada": "15:30",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-1445-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "14:45",
+   "arribada": "16:00",
+   "tipus": "pobles",
+   "notes": [
+    "1",
+    "2"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-1545-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "15:45",
+   "arribada": "17:00",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-1650-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "16:50",
+   "arribada": "17:51",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-1700-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "17:00",
+   "arribada": "18:00",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-dissabte-1815-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "18:15",
+   "arribada": "19:30",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-dissabte-2015-p",
+   "sentit": "tornada",
+   "dia": "dissabte",
+   "sortida": "20:15",
+   "arribada": "21:30",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-diumenge-0615-p",
+   "sentit": "tornada",
+   "dia": "diumenge",
+   "sortida": "06:15",
+   "arribada": "07:50",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-diumenge-0745-p",
+   "sentit": "tornada",
+   "dia": "diumenge",
+   "sortida": "07:45",
+   "arribada": "09:20",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-diumenge-0845-p",
+   "sentit": "tornada",
+   "dia": "diumenge",
+   "sortida": "08:45",
+   "arribada": "10:20",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-diumenge-1045-p",
+   "sentit": "tornada",
+   "dia": "diumenge",
+   "sortida": "10:45",
+   "arribada": "12:20",
+   "tipus": "pobles",
+   "notes": [
+    "2",
+    "5"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-diumenge-1145-p",
+   "sentit": "tornada",
+   "dia": "diumenge",
+   "sortida": "11:45",
+   "arribada": "13:20",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-diumenge-1415-p",
+   "sentit": "tornada",
+   "dia": "diumenge",
+   "sortida": "14:15",
+   "arribada": "15:50",
+   "tipus": "pobles",
+   "notes": [
+    "2",
+    "5"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-diumenge-1535-p",
+   "sentit": "tornada",
+   "dia": "diumenge",
+   "sortida": "15:35",
+   "arribada": "16:36",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-diumenge-1700-p",
+   "sentit": "tornada",
+   "dia": "diumenge",
+   "sortida": "17:00",
+   "arribada": "18:06",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-diumenge-1700-p-2",
+   "sentit": "tornada",
+   "dia": "diumenge",
+   "sortida": "17:00",
+   "arribada": "18:35",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-diumenge-1815-p",
+   "sentit": "tornada",
+   "dia": "diumenge",
+   "sortida": "18:15",
+   "arribada": "19:50",
+   "tipus": "pobles",
+   "notes": [
+    "2",
+    "5"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-diumenge-1905-p",
+   "sentit": "tornada",
+   "dia": "diumenge",
+   "sortida": "19:05",
+   "arribada": "20:06",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-0515-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "05:15",
+   "arribada": "06:50",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-0530-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "05:30",
+   "arribada": "06:35",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-0550-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "05:50",
+   "arribada": "06:51",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-0600-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "06:00",
+   "arribada": "07:00",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   },
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-0615-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "06:15",
+   "arribada": "07:21",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-0615-e-2",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "06:15",
+   "arribada": "07:21",
+   "tipus": "expres",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-0620-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "06:20",
+   "arribada": "07:21",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-0630-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "06:30",
+   "arribada": "07:30",
+   "tipus": "pobles",
+   "notes": [
+    "1",
+    "4"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-0630-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "06:30",
+   "arribada": "07:36",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-0635-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "06:35",
+   "arribada": "08:08",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-0645-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "06:45",
+   "arribada": "07:36",
+   "tipus": "expres",
+   "notes": [
+    "7"
+   ],
+   "regles": {
+    "lectiu": true
+   },
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-0645-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "06:45",
+   "arribada": "07:51",
+   "tipus": "pobles",
+   "notes": [
+    "3"
+   ],
+   "regles": {
+    "excepte": [
+     "estiu",
+     "nadal2631",
+     "setmanaSanta"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-0650-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "06:50",
+   "arribada": "08:01",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-0650-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "06:50",
+   "arribada": "07:51",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-0715-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "07:15",
+   "arribada": "08:21",
+   "tipus": "pobles",
+   "notes": [
+    "3"
+   ],
+   "regles": {
+    "excepte": [
+     "estiu",
+     "nadal2631",
+     "setmanaSanta"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-0720-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "07:20",
+   "arribada": "08:21",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-0730-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "07:30",
+   "arribada": "08:43",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   },
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-0745-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "07:45",
+   "arribada": "08:51",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-0800-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "08:00",
+   "arribada": "09:18",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-0820-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "08:20",
+   "arribada": "09:21",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-0830-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "08:30",
+   "arribada": "09:43",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   },
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-0835-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "08:35",
+   "arribada": "09:35",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-0850-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "08:50",
+   "arribada": "09:51",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-0900-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "09:00",
+   "arribada": "10:13",
+   "tipus": "pobles",
+   "notes": [
+    "1",
+    "6"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-0915-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "09:15",
+   "arribada": "10:41",
+   "tipus": "pobles",
+   "notes": [
+    "3"
+   ],
+   "regles": {
+    "excepte": [
+     "estiu",
+     "nadal2631",
+     "setmanaSanta"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-0935-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "09:35",
+   "arribada": "10:36",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-0945-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "09:45",
+   "arribada": "11:11",
+   "tipus": "pobles",
+   "notes": [
+    "1",
+    "4"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-1015-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "10:15",
+   "arribada": "11:35",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1045-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "10:45",
+   "arribada": "12:10",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1100-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "11:00",
+   "arribada": "12:15",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1115-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "11:15",
+   "arribada": "12:35",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1120-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "11:20",
+   "arribada": "12:26",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1135-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "11:35",
+   "arribada": "12:36",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-1205-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "12:05",
+   "arribada": "13:06",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1215-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "12:15",
+   "arribada": "13:33",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1215-p-2",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "12:15",
+   "arribada": "13:43",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1250-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "12:50",
+   "arribada": "13:51",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-1300-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "13:00",
+   "arribada": "14:13",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1315-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "13:15",
+   "arribada": "14:05",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1315-p-2",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "13:15",
+   "arribada": "14:48",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-1345-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "13:45",
+   "arribada": "15:13",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1350-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "13:50",
+   "arribada": "14:51",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1420-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "14:20",
+   "arribada": "15:21",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1430-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "14:30",
+   "arribada": "15:43",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1450-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "14:50",
+   "arribada": "15:51",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-1500-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "15:00",
+   "arribada": "16:18",
+   "tipus": "pobles",
+   "notes": [
+    "1",
+    "4",
+    "6"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1520-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "15:20",
+   "arribada": "16:21",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1530-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "15:30",
+   "arribada": "16:40",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   },
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1545-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "15:45",
+   "arribada": "16:41",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1545-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "15:45",
+   "arribada": "17:05",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-1600-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "16:00",
+   "arribada": "17:06",
+   "tipus": "pobles",
+   "notes": [
+    "5"
+   ],
+   "regles": {
+    "nomes": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1620-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "16:20",
+   "arribada": "17:21",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1630-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "16:30",
+   "arribada": "17:40",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   },
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1650-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "16:50",
+   "arribada": "17:51",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1700-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "17:00",
+   "arribada": "18:00",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1720-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "17:20",
+   "arribada": "18:21",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1730-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "17:30",
+   "arribada": "18:40",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1745-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "17:45",
+   "arribada": "19:13",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1820-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "18:20",
+   "arribada": "19:21",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1830-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "18:30",
+   "arribada": "19:40",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1850-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "18:50",
+   "arribada": "19:51",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1900-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "19:00",
+   "arribada": "20:13",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   },
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1920-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "19:20",
+   "arribada": "20:21",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-1930-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "19:30",
+   "arribada": "20:43",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-1950-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "19:50",
+   "arribada": "20:51",
+   "tipus": "expres",
+   "notes": [],
+   "regles": {
+    "excepte": [
+     "agost"
+    ]
+   }
+  },
+  {
+   "id": "t-feiner-2000-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "20:00",
+   "arribada": "21:13",
+   "tipus": "pobles",
+   "notes": [
+    "2"
+   ],
+   "regles": {
+    "excepte": [
+     "agost",
+     "dijousSant",
+     "nadal2631"
+    ]
+   },
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-2015-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "20:15",
+   "arribada": "21:48",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-feiner-2025-e",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "20:25",
+   "arribada": "21:41",
+   "tipus": "expres",
+   "notes": [
+    "1"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-feiner-2100-p",
+   "sentit": "tornada",
+   "dia": "feiner",
+   "sortida": "21:00",
+   "arribada": "22:28",
+   "tipus": "pobles",
+   "notes": [
+    "1"
+   ],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-0550-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "05:50",
+   "arribada": "06:51",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-0615-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "06:15",
+   "arribada": "07:21",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-0630-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "06:30",
+   "arribada": "07:30",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-festiuBCN-0645-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "06:45",
+   "arribada": "07:51",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-0700-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "07:00",
+   "arribada": "08:03",
+   "tipus": "pobles",
+   "notes": [
+    "3"
+   ],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-festiuBCN-0715-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "07:15",
+   "arribada": "08:21",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-0745-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "07:45",
+   "arribada": "08:51",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-0800-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "08:00",
+   "arribada": "09:00",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-festiuBCN-0820-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "08:20",
+   "arribada": "09:21",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-0845-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "08:45",
+   "arribada": "10:00",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-0850-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "08:50",
+   "arribada": "09:51",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-0935-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "09:35",
+   "arribada": "10:36",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-0945-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "09:45",
+   "arribada": "11:00",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1115-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "11:15",
+   "arribada": "12:30",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1135-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "11:35",
+   "arribada": "12:36",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1205-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "12:05",
+   "arribada": "13:06",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1250-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "12:50",
+   "arribada": "13:51",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1300-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "13:00",
+   "arribada": "14:26",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-festiuBCN-1350-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "13:50",
+   "arribada": "14:51",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1420-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "14:20",
+   "arribada": "15:21",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1430-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "14:30",
+   "arribada": "15:30",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-festiuBCN-1445-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "14:45",
+   "arribada": "16:00",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1450-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "14:50",
+   "arribada": "15:51",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1520-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "15:20",
+   "arribada": "16:21",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1600-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "16:00",
+   "arribada": "17:00",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-festiuBCN-1620-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "16:20",
+   "arribada": "17:21",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1650-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "16:50",
+   "arribada": "17:51",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1700-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "17:00",
+   "arribada": "18:00",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-festiuBCN-1720-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "17:20",
+   "arribada": "18:21",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1820-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "18:20",
+   "arribada": "19:21",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1830-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "18:30",
+   "arribada": "19:30",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {},
+   "nomesEstacio": true
+  },
+  {
+   "id": "t-festiuBCN-1850-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "18:50",
+   "arribada": "19:51",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1920-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "19:20",
+   "arribada": "20:21",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-1950-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "19:50",
+   "arribada": "20:51",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  },
+  {
+   "id": "t-festiuBCN-2015-p",
+   "sentit": "tornada",
+   "dia": "festiuBCN",
+   "sortida": "20:15",
+   "arribada": "21:30",
+   "tipus": "pobles",
+   "notes": [],
+   "regles": {}
+  }
+ ]
+}

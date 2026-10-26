@@ -1,0 +1,10 @@
+name = "prat-igualada-api"
+main = "index.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+ORIGEN_PERMES = "https://marccgarciia.github.io"   # només l'origen (sense camí)
+TMB_BASE = "https://api.tmb.cat/v1"
+TMB_IMETRO_PATH = "/itransit/metro/estacions"   # documentat a developer.tmb.cat (iMetro)
+CODI_MORERES = "909"   # codi de Les Moreres a la L9S (API Transit, vegeu README)
+CODI_ZONAUNI = "918"

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El Prat ⇄ Igualada</title>
+<meta name="description" content="Propers metros L9 Sud i autocars entre El Prat de Llobregat i Igualada.">
+<meta name="theme-color" content="#fffaf5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14110f" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icona.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icona.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>El Prat <span aria-hidden="true">⇄</span> Igualada</h1>
+  <p id="resum" class="resum"></p>
+</header>
+<div id="avisos" aria-live="polite"></div>
+<nav class="pestanyes" role="tablist">
+  <button role="tab" id="t-anada" data-sentit="anada">Anada</button>
+  <button role="tab" id="t-tornada" data-sentit="tornada">Tornada</button>
+</nav>
+<main id="llista" aria-live="polite"><p class="buit">Carregant…</p></main>
+<footer>
+  <p id="origen" class="origen"></p>
+  <p>Horaris d'autocar orientatius (Monbus, PDF v210126). Dades de metro: <a href="https://developer.tmb.cat">TMB Open Data</a>, segons les seves condicions d'ús.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
