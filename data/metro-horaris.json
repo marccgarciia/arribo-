@@ -1,7 +1,15 @@
 {
-  "_comentari": "Placeholder: el genera la GitHub Action mensual (tools/gtfs_metro.py). Fins que s'executi, la web no té horari previst de metro.",
-  "generat": null,
-  "tempsMetroMin": null,
-  "moreres": { "feiner": [], "dissabte": [], "diumenge": [] },
-  "zonauni": { "feiner": [], "dissabte": [], "diumenge": [] }
+ "_comentari": "Generat per tools/gtfs_metro.py a partir del GTFS de TMB. No editar a mà.",
+ "generat": "2026-10-26",
+ "tempsMetroMin": null,
+ "moreres": {
+  "feiner": [],
+  "dissabte": [],
+  "diumenge": []
+ },
+ "zonauni": {
+  "feiner": [],
+  "dissabte": [],
+  "diumenge": []
+ }
 }
