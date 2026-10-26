@@ -24,7 +24,8 @@ async function carregaMetro(estacio, ctx) {
       const r = await ambTimeout(fetch(`${cfg.workerUrl}/metro?estacio=${estacio}`), cfg.timeoutApiMs);
       if (!r.ok) throw new Error(r.status);
       const { trens } = await r.json();
-      return { tempsReal: true, trens: trens.map(t => ({ min: ara(new Date(t.ts)).min })).filter(t => t.min >= ctx.min - 1).sort((a, b) => a.min - b.min) };
+      const reals = trens.map(t => ({ min: ara(new Date(t.ts)).min })).filter(t => t.min >= ctx.min - 1).sort((a, b) => a.min - b.min);
+      if (reals.length) return { tempsReal: true, trens: reals };   // si TMB no dona trens, cau a l'horari previst
     } catch { /* cau a l'horari previst */ }
   }
   return { tempsReal: false, trens: trensPrevistos(horaris, estacio, ctx.dia, ctx.min, ctx.dow) };
